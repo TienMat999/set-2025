@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super basic JavaScript</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+        /* table header */
+        th {
+            background-color: #ddd;
+        }
+        .yes {
+            color: green;
+            font-weight: bold;
+        }
+        .no {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Homework Day 7 | Super basic JavaScript</h1>
+    <h2>Homework and exercise</h2>
+    <p>Open the console to see the results</p>
+    <script src="./homework.js"></script>
+    <script src="./exercise.js"></script>
+    <h2>Comparison Table of var, let, const in JavaScript</h2>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>var</th>
+            <th>let</th>
+            <th>const</th>
+        </tr>
+        <tr>
+            <td>Scope (Where the variable can be used)</td>
+            <td>Available throughout the entire function (if declared inside a function)</td>
+            <td>Available only inside the block {} where it was declared</td>
+            <td>Available only inside the block {} where it was declared</td>
+        </tr>
+        <tr>
+            <td>Can the value be changed after declaration?</td>
+            <td class="yes">✅ Can be changed (the value inside the variable can be updated)</td>
+            <td class="yes">✅ Can be changed (the value inside the variable can be updated)</td>
+            <td class="no">❌ Cannot be changed (once assigned, the value cannot be modified)</td>
+        </tr>
+        <tr>
+            <td>Can it be redeclared with the same name?</td>
+            <td class="yes">✅ Can be redeclared with the same name in the same scope</td>
+            <td class="no">❌ Cannot be redeclared with the same name in the same scope</td>
+            <td class="no">❌ Cannot be redeclared with the same name in the same scope</td>
+        </tr>
+    </table>
+    <p>P/S: If you assigned a value to a variable without using var, let or const, it will implicitly become a global variable.</p>
+</body>
+</html>
