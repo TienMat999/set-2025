@@ -23,7 +23,7 @@ console.log("BMI = " + BMI(w, h));
 
 //  2. Calculate Simple Interest (principal * rate * time)
 let principal = 1000;
-let rate = 0.05; // %
+let ratePerTime = 0.05; // %
 let time = 2; // year
 let interest = principal * (1 + rate) * time;
 console.log(interest);
