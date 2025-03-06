@@ -11,15 +11,15 @@ console.log("1 === 1 = " + (1 === 1)); // true
 
 // 2. Use variables and operators to:
 //  1. Calculate BMI (Body Mass Index)
-let w = 50; // kg
-let h = 1.6; // m
+let weightBMI = 50; // kg
+let heightBMI = 1.6; // m 
 // var weight = 50; // kg
 // var height = 1.6; // m
 // let bmi = weight / (height ** 2);
 function BMI(weight, height) {
     return weight / (height ** 2);
 }
-console.log("BMI = " + BMI(w, h));
+console.log("BMI = " + BMI(weightBMI, heightBMI));
 
 //  2. Calculate Simple Interest (principal * rate * time)
 let principal = 1000;
