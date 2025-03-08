@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+}
+/* table header */
+th {
+    background-color: #ddd;
+}
+.yes {
+    color: green;
+    font-weight: bold;
+}
+.no {
+    color: red;
+    font-weight: bold;
+}
