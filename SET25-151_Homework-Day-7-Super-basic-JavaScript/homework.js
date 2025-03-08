@@ -12,14 +12,12 @@ console.log("1 === 1 = " + (1 === 1)); // true
 // 2. Use variables and operators to:
 //  1. Calculate BMI (Body Mass Index)
 let weightBMI = 50; // kg
-let heightBMI = 1.6; // m 
-// var weight = 50; // kg
-// var height = 1.6; // m
-// let bmi = weight / (height ** 2);
-function BMI(weight, height) {
+let heightBMI = 1.6; // m
+function calculateBMI(weight, height) {
     return weight / (height ** 2);
 }
-console.log("BMI = " + BMI(weightBMI, heightBMI));
+let bmi = calculateBMI(weightBMI, heightBMI);
+console.log("BMI = " + bmi);
 
 //  2. Calculate Simple Interest (principal * rate * time)
 let principal = 1000;
@@ -30,7 +28,7 @@ console.log(interest);
 
 //  3. Convert Currency (USD to local currency)
 let usd = 100;
-function convertCurrency(usd) { 
+function convertCurrency(usd) {
     let exchangeRate = 24726; // 15h00 03/03/2025, use let instead of const because exchange rate can change over time
     return usd * exchangeRate;
 }
