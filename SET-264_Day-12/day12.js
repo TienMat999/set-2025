@@ -1,4 +1,4 @@
-let marketListWithoutName = [
+const marketListWithoutName = [
     [10000, 10],
     [2000, 20],
     [5000, 10],
@@ -14,7 +14,7 @@ function calculateShoppingBudget(marketList) {
     return sum;
 }
 
-let money = calculateShoppingBudget(marketListWithoutName);
+const money = calculateShoppingBudget(marketListWithoutName);
 console.log(money);
 
 const inputArray = [
@@ -25,23 +25,23 @@ const inputArray = [
 
 // 1 2 3 6 9 8 7 4 5
 
-function snail(inputArray) {
+function snail(inputArray) { // function snail - the name define by Mr.Dang
     const resultArray = [];
     while (inputArray.length) {
-        for (let column = 0; inputArray[0].length; column++) {
+        for (let columnIndex = 0; inputArray[0].length; columnIndex++) {
           	resultArray.push(inputArray[0].shift());
         }
         inputArray.shift();
-        for (let row = 0; row < inputArray.length; row++) {
-            resultArray.push(inputArray[row].pop());
+        for (let rowIndex = 0; rowIndex < inputArray.length; rowIndex++) {
+            resultArray.push(inputArray[rowIndex].pop());
         }
         if (inputArray.length) { // end of row
-            for (let column = inputArray[inputArray.length - 1].length - 1; column >= 0; column--) {
+            for (let columnIndex = inputArray[inputArray.length - 1].length - 1; columnIndex >= 0; columnIndex--) {
                 resultArray.push(inputArray[inputArray.length - 1].pop());
 
             }
         }
-        inputArray.pop()
+        inputArray.pop();
         for (let row = inputArray.length - 1; row >= 0; row--) {
             resultArray.push(inputArray[row].shift());
         }
@@ -49,10 +49,10 @@ function snail(inputArray) {
     return resultArray;
 }
 
-let arrayResult = snail(inputArray)
+const arrayResult = snail(inputArray)
 console.log(arrayResult)
 
-const inputArray2 = [
+const inputArrayTwo = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
     [9, 10, 11, 12],
@@ -60,5 +60,5 @@ const inputArray2 = [
     [17, 18, 19, 20],
 ];
 
-arrayResult = snail(inputArray2)
-console.log(arrayResult)
+const arrayResultTwo = snail(inputArrayTwo)
+console.log(arrayResultTwo)
