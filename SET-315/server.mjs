@@ -55,6 +55,7 @@ const server = http.createServer((req, res) => {
 
 function handleSumRequest(req, res) {
   let body = "";
+  const errorResponse = { error: "Invalid input" };
   req.on("data", (chunk) => {
     body += chunk;
   });
@@ -63,7 +64,6 @@ function handleSumRequest(req, res) {
     try {
       data = JSON.parse(body);
     } catch {
-      const errorResponse = { error: "Invalid JSON" };
       sumCallCount++;
       apiHistory.push({
         endpoint: ENDPOINT.SUM,
@@ -75,7 +75,7 @@ function handleSumRequest(req, res) {
       return;
     }
 
-    const { num1, num2 } = data; // lấy đúng dịnh dạng như đề bài
+    const { num1, num2 } = data; // đặt tên biến theo đề bài để in ra như đề bài
     const numberOne = parseFloat(num1);
     const numberTwo = parseFloat(num2);
     if (
@@ -84,9 +84,6 @@ function handleSumRequest(req, res) {
       isNaN(numberOne) || // không có số
       isNaN(numberTwo)
     ) {
-      const errorResponse = {
-        error: "Invalid input: number one and number two must be numbers",
-      };
       sumCallCount++;
       apiHistory.push({
         endpoint: ENDPOINT.SUM,
@@ -103,7 +100,7 @@ function handleSumRequest(req, res) {
     const response = { sum };
     apiHistory.push({
       endpoint: ENDPOINT.SUM,
-      input: { numberOne, numberTwo },
+      input: data,
       output: response,
     });
     res.statusCode = HTTP_STATUS.OK;
@@ -112,7 +109,7 @@ function handleSumRequest(req, res) {
 }
 
 function handleCountRequest(req, res) {
-  const response = { totalCalls: sumCallCount };
+  const response = { totalCalls: sumCallCount }; // đặt tên biến JSON theo đề bài
   apiHistory.push({
     endpoint: ENDPOINT.SUM_CALL_COUNT,
     input: {},
