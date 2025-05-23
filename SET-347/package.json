@@ -1,7 +1,8 @@
 {
   "name": "day-21",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "server.mjs",
+  "type": "module",
   "scripts": {
     "dev": "nodemon server.mjs",
     "prod": "node server.mjs"
@@ -10,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
   "devDependencies": {
     "nodemon": "^3.1.10"
   }
