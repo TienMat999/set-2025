@@ -1,0 +1,74 @@
+#root {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  /* top: calc(25px * 1);
+  left: calc(25px * 1); */
+  /* NOTE: uncomment dòng code để thấy #root */
+  border: 1px dashed #aaa;
+}
+
+.black    { background-color: black;    width: 50px;  height: 50px;  }
+.yellow   { background-color: yellow;   width: 100px; height: 100px; }
+.blue     { background-color: blue;     width: 150px; height: 150px; }
+.green    { background-color: green;    width: 200px; height: 200px; }
+.red      { background-color: red;      width: 250px; height: 250px; }
+.purple   { background-color: purple;   width: 300px; height: 300px; }
+.darkblue { background-color: darkblue; width: 350px; height: 350px; }
+.grey     { background-color: grey;     width: 400px; height: 400px; }
+
+.grey {
+  position: absolute;
+  top: calc(25px * 1);
+  left: calc(25px * 1);
+  z-index: 1;
+}
+
+.darkblue {
+  position: absolute;
+  top: calc(25px * 2);
+  left: calc(25px * 2);
+  z-index: 2;
+}
+
+.purple {
+  position: absolute;
+  top: calc(25px * 3);
+  left: calc(25px * 3);
+  z-index: 3;
+}
+
+.red {
+  position: absolute;
+  top: calc(25px * 4);
+  left: calc(25px * 4);
+  z-index: 4;
+}
+
+.green {
+  position: absolute;
+  top: calc(25px * 5);
+  left: calc(25px * 5);
+  z-index: 5;
+}
+
+.blue {
+  position: absolute;
+  top: calc(25px * 6);
+  left: calc(25px * 6);
+  z-index: 6;
+}
+
+.yellow {
+  position: absolute;
+  top: calc(25px * 7);
+  left: calc(25px * 7);
+  z-index: 7;
+}
+
+.black {
+  position: absolute;
+  top: calc(25px * 8);
+  left: calc(25px * 8);
+  z-index: 8;
+}
