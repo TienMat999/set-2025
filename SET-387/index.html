@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-app">
+        <h1 class="todo-app__title">Todo App</h1>
+        <div class="todo-app__input-group">
+            <input type="text" id="task-input" class="todo-app__input" placeholder="Add a new task...">
+            <button id="add-task-btn" class="todo-app__button todo-app__button--add">Add</button>
+        </div>
+        <ul id="task-list" class="todo-app__task-list">
+            <li class="todo-app__task-item" data-id="123">
+                <span class="todo-app__task-text">Do do</span>
+                <input type="text" class="todo-app__edit-input" style="display: none;">
+                <button class="todo-app__button todo-app__button--edit">Edit</button>
+                <button class="todo-app__button todo-app__button--delete">Delete</button>
+            </li>
+            <li class="todo-app__task-item" data-id="246">
+                <span class="todo-app__task-text">Do do 2</span>
+                <input type="text" class="todo-app__edit-input" style="display: none;">
+                <button class="todo-app__button todo-app__button--edit">Edit</button>
+                <button class="todo-app__button todo-app__button--delete">Delete</button>
+            </li>
+        </ul>
+        <div class="todo-app__actions">
+            <button id="clear-completed-btn" class="todo-app__button todo-app__button--clear-completed">Clear Completed Tasks</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
