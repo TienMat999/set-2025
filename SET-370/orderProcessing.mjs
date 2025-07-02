@@ -163,6 +163,7 @@ function processOrder({ restaurantId, orderId, amount }) {
     .finally(() => console.log("🔚  Kết thúc quy trình.\n"));
 }
 
+
 async function handleOrder({ restaurantId, orderId, amount }) {
   console.log("\n🔄  Bắt đầu quy trình với async/await");
 
