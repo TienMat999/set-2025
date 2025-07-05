@@ -71,6 +71,30 @@ document.addEventListener('DOMContentLoaded', () => {
         return li;
     };
 
+    const addTask = () => {
+        const taskText = taskInput.value.trim();
+        if (taskText === '') {
+            alert('Task cannot be empty!');
+            return;
+        }
+        
+        const newTask = {
+            id: Date.now(),
+            text: taskText,
+            completed: false
+        };
+        
+        tasks.push(newTask);
+        renderTask(newTask);
+        taskInput.value = '';
+        taskInput.focus();
+    };
+
+    const renderTasks = () => {
+        taskList.innerHTML = '';
+        tasks.forEach(task => renderTask(task));
+    };
+    
     const updateTaskText = (id, newText) => {
         const task = tasks.find(t => t.id === id);
         if (task && newText.trim() !== '') {
@@ -79,30 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (task && newText.trim() === '') {
             renderTasks();
         }
-    };
-
-    const renderTasks = () => {
-        taskList.innerHTML = '';
-        tasks.forEach(task => renderTask(task));
-    };
-
-    const addTask = () => {
-        const taskText = taskInput.value.trim();
-        if (taskText === '') {
-            alert('Task cannot be empty!');
-            return;
-        }
-
-        const newTask = {
-            id: Date.now(),
-            text: taskText,
-            completed: false
-        };
-
-        tasks.push(newTask);
-        renderTask(newTask);
-        taskInput.value = '';
-        taskInput.focus();
     };
 
     const toggleTaskCompletion = (id) => {
